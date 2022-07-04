@@ -8,3 +8,10 @@ body {
   padding: 2rem 7rem;
   font-family: "Montserrat", sans-serif;
 }
+
+.weatherBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+}
