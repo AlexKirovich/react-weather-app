@@ -20,8 +20,8 @@ const Humidity = () => {
           y2="5.22217"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#34CDFA" />
-          <stop offset="1" stop-color="#E8D9F1" />
+          <stop stopColor="#34CDFA" />
+          <stop offset="1" stopColor="#E8D9F1" />
         </linearGradient>
       </defs>
     </svg>
