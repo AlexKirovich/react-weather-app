@@ -1,0 +1,52 @@
+.CurrentWeatherInfo {
+  padding: 1rem 0;
+  width: 100%;
+  margin-left: 3rem;
+  background: #ffffff;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+  background-image: url('../../../assets/IMGs/Cloud\ image.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  .infoRows {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+    .infoContent {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        margin-left: 2.5rem;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+      }
+      .iconBkg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        padding: 0.5rem;
+        background-color: #ffffff;
+        border-radius: 100%;
+        opacity: 0.88;
+        box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+      }
+      p:first-of-type {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: right;
+        color: #939cb0;
+      }
+    }
+
+    .infoContent:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
