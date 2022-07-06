@@ -20,7 +20,7 @@ function App() {
         `http://api.weatherapi.com/v1/forecast.json?key=7ec8d62371de48d48be165112220507&q=${value}&days=10&aqi=no&alerts=no`
       )
         .then((data) => data.json())
-        .then((res) => setCity(res))
+        .then((result) => setCity(result))
         .then(() => console.log(city));
     } catch (err) {
       console.log(err);
@@ -29,13 +29,18 @@ function App() {
   return (
     <div className="App">
       <Header onChange={handleChange} handleSubmit={handleSubmit} />
-      <div className="weatherBlock">
-        <CurrentWeather />
-        <CurrentWeatherInfo />
-      </div>
+      {city && (
+        <div className="weatherBlock">
+          <CurrentWeather
+            city={city.location.name}
+            temp={city.current.temp_c}
+            time={city.location.localtime}
+          />
+          <CurrentWeatherInfo />
+        </div>
+      )}
       <Cards />
     </div>
   );
 }
-
 export default App;
