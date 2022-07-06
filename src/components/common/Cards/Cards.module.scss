@@ -4,6 +4,7 @@
   .cardsBtns {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 0.5rem;
     .cardsBtns_left {
       button {
@@ -39,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    flex-wrap: wrap;
     .Card {
       margin: 1rem 0.5rem;
       padding: 1rem;
