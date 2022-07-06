@@ -4,7 +4,8 @@ import Humidity from "../../../assets/SVGs/Humidity";
 import Precipitation from "../../../assets/SVGs/Precipitation";
 import Wind from "../../../assets/SVGs/Wind";
 
-const CurrentWeatherInfo = () => {
+
+const CurrentWeatherInfo = (props) => {
   return (
     <div className={s.CurrentWeatherInfo}>
       <div className={s.infoRows}>
