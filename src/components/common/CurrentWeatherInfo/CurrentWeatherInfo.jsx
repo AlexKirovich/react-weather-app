@@ -1,42 +1,43 @@
 import s from "./CurrentWeatherInfo.module.scss";
-import Temp from "../../../assets/SVGs/Temp";
-import Humidity from "../../../assets/SVGs/Humidity";
-import Precipitation from "../../../assets/SVGs/Precipitation";
-import Wind from "../../../assets/SVGs/Wind";
-
+import { Temp, Humidity, Precipitation, Wind } from "../../../Imports";
 
 const CurrentWeatherInfo = (props) => {
+
+  const infoRows = [
+    {
+      icon: <Temp />,
+      name: "Temperature",
+      text: `${props.temp}° - feels like ${props.feelslike}°`,
+    },
+    {
+      icon: <Humidity />,
+      name: "Humidity",
+      text: `${props.humidity}% - the dew point is ...`,
+    },
+    {
+      icon: <Precipitation />,
+      name: "Precipitation",
+      text: `${props.precip}`,
+    },
+    {
+      icon: <Wind />,
+      name: "wind",
+      text: `${props.wind} kilometers per hour`,
+    },
+  ];
+
   return (
-    <div className={s.CurrentWeatherInfo}>
-      <div className={s.infoRows}>
-        <div className={s.infoContent}>
-          <div className={s.iconBkg}>
-            <Temp />
-          </div>
-          <p>Temperature</p>
-          <p>20° - feels like 17°</p>
-        </div>
-        <div className={s.infoContent}>
-          <div className={s.iconBkg}>
-            <Humidity/>
-          </div>
-          <p>Humidity</p>
-          <p>58% - the dew point is 14%</p>
-        </div>
-        <div className={s.infoContent}>
-          <div className={s.iconBkg}>
-            <Precipitation />
-          </div>
-          <p>Precipitation</p>
-          <p>No precipitation</p>
-        </div>
-        <div className={s.infoContent}>
-          <div className={s.iconBkg}>
-            <Wind />
-          </div>
-          <p>Wind</p>
-          <p>16 kilometers per hour</p>
-        </div>
+    <div className={s.current_weather_info}>
+      <div className={s.info_rows}>
+        {infoRows.map((row) => {
+          return (
+            <div className={s.info_content}>
+              <div className={s.icon_bkg}>{row.icon}</div>
+              <p>{row.name}</p>
+              <p>{row.text}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

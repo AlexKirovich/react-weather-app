@@ -1,4 +1,4 @@
-.CurrentWeather {
+.current_weather {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6,34 +6,33 @@
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
   border-radius: 20px;
   padding: 3rem;
-
-  .temperature_part {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    p {
-      font-weight: 400;
-      font-size: 40px;
-      color: #000000;
-    }
-    svg {
-      margin-left: 2.5rem;
-    }
-    h2 {
-      font-weight: 500;
-      font-size: 96px;
-      line-height: 117px;
-      color: #4793ff;
-    }
+}
+.temperature_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    font-weight: 400;
+    font-size: 40px;
+    color: #000000;
   }
-  .timeDate {
-    margin-top: 1.5rem;
-    p {
-      font-weight: 100;
-      font-size: 25px;
-      line-height: 30px;
-      color: #939cb0;
-    }
+  svg {
+    margin-left: 2.5rem;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 117px;
+    color: #4793ff;
+  }
+}
+.time_date {
+  margin-top: 1.5rem;
+  p {
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 30px;
+    color: #939cb0;
   }
 }

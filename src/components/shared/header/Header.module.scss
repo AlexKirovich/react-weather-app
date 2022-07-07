@@ -1,21 +1,23 @@
-.header {
+%flex-shared{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .header_side {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    vertical-align: middle;
-    svg {
-      cursor: pointer;
-    }
-    .header_side_right {
-      margin-left: 1.5rem;
-    }
+  vertical-align: middle;
+}
+.header {
+  @extend %flex-shared;
+}
+.header_part {
+  @extend %flex-shared;
+  
+  svg {
+    cursor: pointer;
   }
 }
+.header_part_right {
+  margin-left: 1.5rem;
+}
+
 h1 {
   font-weight: bold;
   font-size: 25px;
@@ -25,8 +27,6 @@ h1 {
 }
 
 input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   padding: 0.5rem 1rem;
   color: #000000;
   background: rgba(71, 147, 255, 0.2);
