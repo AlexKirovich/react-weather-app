@@ -1,0 +1,66 @@
+import {
+  SunSmall,
+  RainSun,
+  SmallRain,
+  Cloudy,
+  Rain,
+} from "../../../../Imports";
+
+export const forecast = [
+  {
+    day: "Td",
+    day_info: "28 aug",
+    icon_id: <SunSmall />,
+    temp_day: "+18",
+    temp_night: "+15",
+    info: "Sunny",
+  },
+  {
+    day: "Tm",
+    day_info: "29 aug",
+    icon_id: <RainSun />,
+    temp_day: "+18",
+    temp_night: "+15",
+    info: "Rain with the Sun",
+  },
+  {
+    day: "Wed",
+    day_info: "30 aug",
+    icon_id: <SmallRain />,
+    temp_day: "+18",
+    temp_night: "+15",
+    info: "Some rain",
+  },
+  {
+    day: "Th",
+    day_info: "28 aug",
+    icon_id: <Cloudy />,
+    temp_day: "+18",
+    temp_night: "+15",
+    info: "Cloudy",
+  },
+  {
+    day: "Fr",
+    day_info: "28 aug",
+    icon_id: <Rain />,
+    temp_day: "+18",
+    temp_night: "+15",
+    info: "Rain",
+  },
+  {
+    day: "Sat",
+    day_info: "28 aug",
+    icon_id: <SunSmall />,
+    temp_day: "+18",
+    temp_night: "+15",
+    info: "Sunny",
+  },
+  {
+    day: "Sun",
+    day_info: "28 aug",
+    icon_id: <Cloudy />,
+    temp_day: "+18",
+    temp_night: "+15",
+    info: "Cloudy",
+  },
+];

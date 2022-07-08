@@ -1,71 +1,86 @@
 import s from "./Cards.module.scss";
-import SunSmall from "../../../assets/SVGs/weatherIcons/SunSmall.jsx";
 import { useState } from "react";
-const Cards = (props) => {
-  const WEATHER_API = props.weather_api;
-  const [active, setActive] = useState(false);
+import { nanoid } from "nanoid";
+import { forecast } from "./forecast/forecast";
+import Card from "./forecast/Card/Card";
 
-  const changeStatusBtn = () => {
-    setActive(!active);
-  };
+const Cards = () => {
+  const [status7Days, setStatus7Days] = useState(true);
 
-  const styles = {
-    backgroundColor: active ? "#4793FF" : "#FFFFFF",
-    color: active ? "#FFFFFF": '#000000',
-  };
-
-  const Card = (props) => {
+  const cards = forecast.map((day) => {
     return (
-      <div className={s.Card}>
-        <h3>{props.day}</h3>
-        <p>{props.date}</p>
-        {props.svg}
-        <p className={s.CardTempHi}>{props.tempHi}</p>
-        <p className={s.CardTempLo}>{props.tempLo}</p>
-        <p className={s.CardSum}>{props.sum}</p>
-      </div>
+      <Card
+        key={day.day}
+        day={day.day}
+        date={day.day_info}
+        svg={day.icon_id}
+        tempHi={day.temp_day}
+        tempLo={day.temp_night}
+        sum={day.info}
+      />
+    );
+  });
+
+  const Button = (props) => {
+    const styles = {
+      backgroundColor: props.isClicked ? "#4793FF" : "#FFFFFF",
+      color: props.isClicked ? "#FFFFFF" : "#000000",
+    };
+
+    return (
+      <button
+        style={styles}
+        key={props.id}
+        id={props.id}
+        onClick={props.onClick}
+      >
+        {props.value}
+      </button>
     );
   };
 
-  const makeCards = () => {
-    const cards = [];
-    let key = 0
-    for (const day of WEATHER_API["forecast"].forecastday) {
-      cards.push(
-        <Card
-          key={key}
-          day={day.date}
-          date={day.date}
-          svg={<SunSmall />}
-          tempHi={day.day.maxtemp_c}
-          tempLo={day.day.mintemp_c}
-          sum={day.day.condition.text}
-        />
-      );
-      key++;
-    }
-    return cards;
-  };
+  const buttonsInfo = [
+    {
+      text: "7 days",
+      isClicked: status7Days,
+      id: nanoid(),
+      click: () => setStatus7Days(!status7Days),
+    },
+    {
+      text: "10 days",
+      isClicked: false,
+      id: nanoid(),
+      click: () => {alert('no info')},
+    },
+    {
+      text: "month",
+      isClicked: false,
+      id: nanoid(),
+      click: () => {alert('no info')},
+    },
+  ];
+
+  const buttons = buttonsInfo.map((e) => {
+    return (
+      <Button
+        onClick={e.click}
+        key={e.id}
+        id={e.id}
+        isClicked={e.isClicked}
+        value={e.text}
+      />
+    );
+  });
 
   return (
     <div className={s.Cards}>
       <div className={s.cardsBtns}>
-        <div className={s.cardsBtns_left}>
-          <button>Week</button>
-          <button>Month</button>
-          <button style={styles} onClick={changeStatusBtn}>10 days</button>
-        </div>
+        <div className={s.cardsBtns_left}>{buttons}</div>
         <div className={s.cardsBtns_right}>
-          <button>Cancel</button>
+          <button onClick={() => setStatus7Days(false)}>Cancel</button>
         </div>
       </div>
-      {active && (
-        <div className={s.CardsWeather}>
-          {makeCards().map((e) => e)}
-          {makeCards().map((e) => e)}
-          {makeCards().map((e) => e)}
-        </div>
-      )}
+      {status7Days && <div className={s.CardsWeather}>{cards}</div>}
     </div>
   );
 };

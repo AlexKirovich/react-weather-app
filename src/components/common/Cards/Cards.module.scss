@@ -1,89 +1,45 @@
 .Cards {
   padding-top: 3rem;
   width: 100%;
-  .cardsBtns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-bottom: 0.5rem;
-    .cardsBtns_left {
-      button {
-        font-family: "Montserrat";
-        margin-left: 1rem;
-        padding: 0.5rem 2rem;
-        background: #ffffff;
-        box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
-        border-radius: 5px;
-        border: none;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-        color: #000000;
-        &:hover {
-          background-color: #4793ff;
-        }
-        &:first-of-type {
-          margin-left: 0;
-        }
-      }
-    }
-    .cardsBtns_right {
-      @extend .cardsBtns_left;
-    }
-  }
-
-  .CardsWeather {
-    padding: 0 1rem;
+}
+.CardsWeather {
+  padding: 0 1rem;
+  background: #ffffff;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardsBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+}
+.cardsBtns_right {
+  @extend .cardsBtns_left;
+}
+.cardsBtns_left {
+  button {
+    font-family: "Montserrat";
+    margin-left: 1rem;
+    padding: 0.5rem 2rem;
     background: #ffffff;
     box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
-    border-radius: 0px 0px 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    .Card {
-      margin: 1rem 0.5rem;
-      padding: 1rem;
-      width: 150px;
-      background: rgba(71, 147, 255, 0.2);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-
-      h3 {
-        font-weight: 200;
-        font-size: 22px;
-        line-height: 22px;
-        color: #000000;
-      }
-      p:first-of-type {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        color: #939cb0;
-        margin-top: 0.4rem;
-      }
-      svg {
-        margin-top: 1rem;
-      }
-      .CardTempHi {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 22px;
-        color: #000000;
-        margin-top: 1rem;
-      }
-      .CardTempLo {
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 16px;
-        color: #939cb0;
-      }
-      .CardSum {
-        @extend .CardTempLo;
-        font-size: 14px;
-        margin-top: 0.5rem;
-      }
+    border-radius: 5px;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    &:hover {
+      background-color: #4793ff;
+      color: #ffffff;
+    }
+    &:first-of-type {
+      margin-left: 0;
     }
   }
 }

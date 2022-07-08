@@ -45,7 +45,7 @@ function App() {
               wind={city.current.wind_kph}
             />
           </div>
-          <Cards weather_api={city}/>
+          <Cards/>
         </>
       )}
     </div>
