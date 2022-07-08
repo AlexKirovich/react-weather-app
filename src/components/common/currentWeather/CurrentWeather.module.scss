@@ -1,8 +1,10 @@
+@import url('../../variables.css');
+
 .current_weather {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #ffffff;
+  background: var(--block-bg-default);
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
   border-radius: 20px;
   padding: 3rem;
@@ -15,7 +17,7 @@
   p {
     font-weight: 400;
     font-size: 40px;
-    color: #000000;
+    color: var(--text-color-default);
   }
   svg {
     margin-left: 2.5rem;

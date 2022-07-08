@@ -23,8 +23,8 @@ const Cards = () => {
 
   const Button = (props) => {
     const styles = {
-      backgroundColor: props.isClicked ? "#4793FF" : "#FFFFFF",
-      color: props.isClicked ? "#FFFFFF" : "#000000",
+      backgroundColor: props.isClicked ? "#4793FF" : '',
+      color: props.isClicked ? "#FFFFFF" : '',
     };
 
     return (
@@ -73,14 +73,14 @@ const Cards = () => {
   });
 
   return (
-    <div className={s.Cards}>
-      <div className={s.cardsBtns}>
-        <div className={s.cardsBtns_left}>{buttons}</div>
-        <div className={s.cardsBtns_right}>
+    <div className={s.cards}>
+      <div className={s.cards_btns}>
+        <div className={s.cards_btns_left}>{buttons}</div>
+        <div className={s.cards_btns_right}>
           <button onClick={() => setStatus7Days(false)}>Cancel</button>
         </div>
       </div>
-      {status7Days && <div className={s.CardsWeather}>{cards}</div>}
+      {status7Days && <div className={s.cards_weather}>{cards}</div>}
     </div>
   );
 };

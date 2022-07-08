@@ -1,8 +1,10 @@
+@import url("../../variables.css");
+
 .current_weather_info {
   padding: 1rem 0;
   width: 100%;
   margin-left: 3rem;
-  background: #ffffff;
+  background-color: var(--block-bg-default);
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
   border-radius: 20px;
   background-image: url("../../../assets/IMGs/Cloud\ image.png");
@@ -27,7 +29,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #000000;
+    color: var(--text-color-default);
   }
   p:first-of-type {
     font-weight: 400;

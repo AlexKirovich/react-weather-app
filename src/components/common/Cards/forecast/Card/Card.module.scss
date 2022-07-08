@@ -1,8 +1,10 @@
+@import url("../../../../variables.css");
+
 .Card {
   margin: 1rem 0.5rem;
   padding: 1rem;
   width: 150px;
-  background: rgba(71, 147, 255, 0.2);
+  background: var(--card-bg-default);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -10,7 +12,7 @@
     font-weight: 200;
     font-size: 22px;
     line-height: 22px;
-    color: #000000;
+    color: var(--text-color-default);
   }
   p:first-of-type {
     font-weight: 400;
@@ -27,7 +29,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: var(--text-color-default);
   margin-top: 1rem;
 }
 .CardTempLo {

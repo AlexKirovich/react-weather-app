@@ -1,42 +1,43 @@
-.Cards {
+@import url('../../variables.css');
+.cards {
   padding-top: 3rem;
   width: 100%;
 }
-.CardsWeather {
+.cards_weather {
   padding: 0 1rem;
-  background: #ffffff;
+  background: var(--block-bg-default);
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
   border-radius: 0px 0px 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.cardsBtns {
+.cards_btns {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 0.5rem;
 }
-.cardsBtns_right {
-  @extend .cardsBtns_left;
+.cards_btns_right {
+  @extend .cards_btns_left;
 }
-.cardsBtns_left {
+.cards_btns_left {
   button {
     font-family: "Montserrat";
     margin-left: 1rem;
     padding: 0.5rem 2rem;
-    background: #ffffff;
+    background: var(--block-bg-default);
     box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
     border-radius: 5px;
     border: none;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    color: #000000;
+    color: var(--text-color-default);
     &:hover {
       background-color: #4793ff;
-      color: #ffffff;
+      color: var(--text-color-default);
     }
     &:first-of-type {
       margin-left: 0;

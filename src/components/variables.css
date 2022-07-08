@@ -1,0 +1,21 @@
+:root{
+    --body-bg-light: #ffffff;
+    --body-bg-dark: #000000;
+    --body-bg-default: var(--body-bg-dark);
+
+    --block-bg-light: #ffffff;
+    --block-bg-dark: #4F4F4F;
+    --block-bg-default: var(--block-bg-dark);
+
+    --card-bg-light: rgba(71, 147, 255, 0.2);;
+    --card-bg-dark: #2E3035;
+    --card-bg-default: var(--card-bg-dark);
+
+    --text-color-light: #000000;
+    --text-color-dark: #ffffff;
+    --text-color-default: var(--text-color-dark);
+
+    --shadow-color-dark: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    --shadow-color-light: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    --shadow-color-default: var(--shadow-color-dark);
+}
