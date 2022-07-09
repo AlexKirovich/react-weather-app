@@ -1,4 +1,4 @@
-@import url('../../variables.css');
+@import url("../../variables.css");
 
 .current_weather {
   display: flex;
@@ -16,16 +16,16 @@
   align-items: center;
   p {
     font-weight: 400;
-    font-size: 40px;
+    font-size: 34px;
     color: var(--text-color-default);
   }
   svg {
     margin-left: 2.5rem;
+    max-width: 100px;
   }
   h2 {
     font-weight: 500;
     font-size: 96px;
-    line-height: 117px;
     color: #4793ff;
   }
 }
@@ -34,7 +34,64 @@
   p {
     font-weight: 100;
     font-size: 25px;
-    line-height: 30px;
     color: #939cb0;
+  }
+}
+@media (max-width: 1100px) {
+  .current_weather {
+    width: calc(100% - 6rem);
+    justify-content: center;
+  }
+  .temperature_block {
+    align-items: center;
+    vertical-align: middle;
+  }
+}
+@media (max-width: 480px) {
+  .temperature_block {
+    h2 {
+      font-size: 68px;
+    }
+    p {
+      margin: 2;
+      padding: 0;
+      font-size: 18px;
+    }
+    svg {
+      max-width: 75px;
+      min-width: 65px;
+    }
+  }
+  .time_date {
+    margin-top: 1.5rem;
+    p {
+      font-size: 18px;
+      color: #939cb0;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 380px){
+  .temperature_block {
+    h2 {
+      font-size: 54px;
+    }
+    p {
+      font-size: 14px;
+    }
+    svg {
+      max-width: 70px;
+      min-width: 60px;
+    }
+  }
+  .time_date {
+    margin-top: 1rem;
+    p {
+      font-size: 14px;
+      color: #939cb0;
+    }
+  }
+  .current_weather{
+    padding: 2rem;
   }
 }
