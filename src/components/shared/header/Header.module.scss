@@ -7,6 +7,7 @@
   vertical-align: middle;
 }
 .header {
+  margin: 2rem 3rem;
   @extend %flex-shared;
 }
 .header_part {
@@ -23,7 +24,6 @@
 h1 {
   font-weight: bold;
   font-size: 25px;
-  line-height: 30px;
   text-transform: uppercase;
   color: #4793ff;
 }
@@ -40,4 +40,46 @@ input {
 .theme_btn{
   background: none;
   border: none;
+}
+@media only screen and (max-width: 760px) {
+  .header {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 1rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+
+  %flexx-shared {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+  }
+  .header {
+    gap: 1rem;
+  }
+  .header_part {
+    @extend %flexx-shared;
+  
+    svg {
+      cursor: pointer;
+      max-width: 50px;
+    }
+    h1{
+      font-size: 22px;
+    }
+    input {
+      max-width: 200px;
+      font-size: 13px;
+    }
+    .theme_btn{
+      width: 30px;
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 480px){
+  .header{
+    margin-top: 1rem;
+  }
 }
