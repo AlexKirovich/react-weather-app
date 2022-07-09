@@ -27,13 +27,11 @@
     margin-left: 2.5rem;
     font-weight: 400;
     font-size: 14px;
-    line-height: 17px;
     color: var(--text-color-default);
   }
   p:first-of-type {
     font-weight: 400;
     font-size: 14px;
-    line-height: 17px;
     text-align: right;
     color: #939cb0;
   }
@@ -49,4 +47,53 @@
   border-radius: 100%;
   opacity: 0.88;
   box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+}
+
+@media (max-width: 510px) {
+  .current_weather_info {
+    background-image: url("");
+  }
+  .icon_bkg {
+    width: 30px;
+    height: 30px;
+    svg {
+      width: 17px;
+    }
+  }
+  .info_content {
+    p {
+      margin-left: 1rem;
+      font-size: 12px;
+    }
+    p:first-of-type {
+      font-size: 12px;
+    }
+  }
+  .info_rows {
+    padding-left: 1rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 380px) {
+  .info_rows {
+    padding-left: 1rem;
+    margin: 0;
+  }
+  .icon_bkg {
+    width: 26px;
+    height: 26px;
+    svg {
+      width: 15px;
+    }
+  }
+  .info_content {
+    p {
+      margin-left: 0.5rem;
+      font-size: 10px;
+    }
+    p:first-of-type {
+      font-size: 10px;
+    }
+  }
 }
