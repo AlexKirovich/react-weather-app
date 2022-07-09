@@ -5,7 +5,7 @@ import { useState } from "react";
 const Header = (props) => {
   const [theme, setTheme] = useState("light");
 
-  function changeTheme() {
+  const  changeTheme = () =>  {
     setTheme(theme === "dark" ? "light" : "dark");
     const root = document.querySelector(":root");
     const components = [
