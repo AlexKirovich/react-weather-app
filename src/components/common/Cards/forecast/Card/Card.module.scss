@@ -43,3 +43,30 @@
   font-size: 14px;
   margin-top: 0.5rem;
 }
+
+@media (max-width: 460px) {
+  .Card{
+    width: 100px;
+    margin: 0.5rem;
+    h3{
+      font-size: 18px;
+    }
+    p:first-of-type{
+      font-size: 12px;
+    }
+  }
+  .CardTempHi{
+    font-size: 16px;
+  }
+  .CardTempLo{
+    font-size:12px
+  }
+  .CardSum{
+    font-size: 13px;
+  }
+}
+@media (max-width: 360px) {
+  .Card{
+    width: 80px;
+  }
+}

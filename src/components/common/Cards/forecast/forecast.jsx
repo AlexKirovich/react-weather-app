@@ -21,7 +21,7 @@ export const forecast = [
     icon_id: <RainSun />,
     temp_day: "+18",
     temp_night: "+15",
-    info: "Rain with the Sun",
+    info: "Rai&Sun",
   },
   {
     day: "Wed",

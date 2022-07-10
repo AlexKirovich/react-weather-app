@@ -1,10 +1,9 @@
-@import url('../../variables.css');
+@import url("../../variables.css");
 .cards {
   padding-top: 3rem;
-  width: 100%;
+  padding: 0 2rem;
 }
 .cards_weather {
-  padding: 0 1rem;
   background: var(--block-bg-default);
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
   border-radius: 0px 0px 20px 20px;
@@ -17,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 0.5rem;
+  padding: 1rem 0rem;
 }
 .cards_btns_right {
   @extend .cards_btns_left;
@@ -42,5 +41,57 @@
     &:first-of-type {
       margin-left: 0;
     }
+  }
+}
+
+@media (max-width: 940px) {
+  .cards_weather {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 612px) {
+  .cards_btns {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .cards_btns_right {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards_btns_left {
+    button {
+      margin-left: 0.5rem;
+      font-size: 14px;
+      line-height: 0;
+      padding: 1rem 2rem;
+    }
+  }
+  .cards_btns_right {
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 420px) {
+  .cards {
+    padding-top: 1rem;
+  }
+  .cards_btns {
+    flex-direction: column;
+  }
+  .cards_btns_left {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    button {
+      margin-left: 0;
+    }
+  }
+  .cards_btns_right {
+    margin-top: 0;
   }
 }

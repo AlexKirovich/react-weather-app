@@ -23,3 +23,8 @@ body {
     flex-direction: column;
   }
 }
+@media (max-width: 480px) {
+  .weatherBlock{
+    padding: 1rem 2rem 0rem 2rem;
+  }
+}
